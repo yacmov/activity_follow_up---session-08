@@ -33,6 +33,25 @@ def game_over(results) -> str:
     """
     return f"""\nThank you for playing\nNumber of wins during the game: {tally_wins(results)}"""
 
+def reset_board(board) -> None:
+    """
+    Purpose
+    =======
+    Empty all cells data
+
+    Parameters
+    ----------
+    board: 2D list
+        Main game board
+
+    Examples
+    --------
+    board = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
+    """
+    for row in range(len(board)):
+        for col in range(len(board)):
+            board[row][col] = " "
+
 def print_board():
     for row in board:
      
