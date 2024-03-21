@@ -237,7 +237,29 @@ def is_win(player) -> bool:
 
 
 
-def tally_wins(results):
+
+
+def tally_wins(results) -> int:
+    """
+    Purpose
+    =======
+    Return a int depending on how many times win
+
+    Parameters
+    ----------
+    results: list
+        holding bool depending on win previously
+
+    Return
+    ------
+    int: True is 1 and False is 0, and sum up all numbers in list then return total
+
+    Example
+    -------
+    .. code-block:: python
+    >>> tally_wins(results) # if the list hold 'True' and 'True'
+    2 # True(1) + True(1) = 2
+    """
     # Leveraging the fact that in Python: True = 1 and False = 0 
     # we can use sum() to count the number of wins by counting all Trues and Falses
     return sum(results)
