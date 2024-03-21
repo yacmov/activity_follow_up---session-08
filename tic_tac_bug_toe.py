@@ -265,32 +265,53 @@ def tally_wins(results) -> int:
     return sum(results)
 
 
-def main():
+def main() -> None:
+    """
+    Purpose
+    =======
+    This is main game loop, HAVE FUN! 😁
+    """
     current_player = 'X'
-    moves = 0
+    moves = 10
     results = []
 
-    while moves < 9:
-        print_board()
-        # ChatGPT chose an unusual way to implement this. `map` applies the function int to each element split out of the input string.
-        # Note that list comprehensions are more Pythonic, easier to read, and in recent versions of Python, faster.
-        row, col = map(int, input(f"Player {current_player}, enter row and column (0-2) separated by space: ").split())
-        if board[row][col] == ' ':
-            board[row][col] = current_player
-            win = is_win(current_player)
-            results.append(win)
-            if win:
-                print_board()
-                print(f"Player {current_player} wins!")
-                return
-            current_player = 'O' if current_player == 'X' else 'X'  # Switch player
-            moves += 1
-        else:
-            print("Cell already occupied! Try again.")
-    print_board()
-    print("It's a draw!")
-    print(f"Number of wins during the game: {tally_wins(results)}")
-
-
+    # test_draw(board)
+    while moves <= 9:
+        try: 
+            draw = is_draw(board)
+            if draw:
+                again = play_again("Do you want Play again?")
+                if again == True:
+                    reset_board(board)
+                    moves = reset_move()
+                    continue
+                else:
+                    break
+            print_board()
+            # ChatGPT chose an unusual way to implement this. `map` applies the function int to each element split out of the input string.
+            # Note that list comprehensions are more Pythonic, easier to read, and in recent versions of Python, faster.
+            row, col = map(int, input(f"Player {current_player}, enter row and column (0-2) separated by space: ").split())
+            if board[row][col] == ' ':
+                board[row][col] = current_player
+                win = is_win(current_player)
+                results.append(win)
+                if win:
+                    print_board()
+                    print(f"Player {current_player} wins!")
+                    again = play_again("Do you want Play again?")
+                    if again == True:
+                        reset_board(board)
+                        moves = reset_move()
+                    else:
+                        break
+                current_player = 'O' if current_player == 'X' else 'X'  # Switch player
+                moves += 1
+            else:
+                print("Cell already occupied! Try again.")
+        except:
+            print("invalid input try again")
+    
+    print(game_over(results))
+    
 if __name__ == "__main__":
     main()
