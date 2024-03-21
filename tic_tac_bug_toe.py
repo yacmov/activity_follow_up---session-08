@@ -52,6 +52,53 @@ def reset_board(board) -> None:
         for col in range(len(board)):
             board[row][col] = " "
 
+def reset_move() -> int:
+    """
+    Purpose
+    =======
+    Reset moves number to 0
+
+    Returns
+    -------
+    int: 0
+
+    Examples
+    --------
+    .. code-block:: python
+    >>> moves = reset_move()
+    0
+    """
+    return 0
+
+def play_again(msg) -> bool:
+    """
+    Purpose
+    =======
+    Ask the user to play one more time
+
+    Parameters
+    ----------
+    msg: string
+        This parameter value will pass to print statement
+    
+    Returns
+    -------
+    bool: True or False depending on input
+
+    Examples
+    --------
+    .. code-block:: python
+    >>> play_again("Hello World")
+    Hello World Y or N: 
+    >>> play_again("Do you want play again?")
+    Do you want Play again Y or N:
+
+    """
+    again = input(f"{msg} Y or N: ")
+    if "Y" == str(again).upper():
+        return True
+    return False
+
 def print_board():
     for row in board:
      
