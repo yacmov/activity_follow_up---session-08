@@ -152,6 +152,35 @@ def is_draw(board) -> bool:
         return True
     return False
 
+def check_draw(board) -> bool:
+    """
+    Purpose
+    =======
+    Return there is a empty cell or not
+
+    Parameters
+    ----------
+    board: 2D list
+        Main game board
+
+    Return
+    ------
+    Bool type: True or False
+
+    Examples
+    --------
+    .. code-block:: python
+    >>> check_draw(board)
+    True # If there is no empty slot
+    False # If empty slot exist
+
+    """
+    for row in range(len(board)):
+        for col in range(len(board)):
+            if board[row][col] == " ":
+                return False
+    return True
+
 def print_board():
     for row in board:
      
