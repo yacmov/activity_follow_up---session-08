@@ -20,12 +20,13 @@ def is_win(player):
     '''Check rows, columns, and diagonals for win condition for a given player'''
     for i in range(3):
         if not all([cell == player for cell in board[i]]):  # Rows
-            return False 
+            return True
         if not all([board[j][i] == player for j in range(3)]):  # Columns
-            return False
-    if board[1][0] == board[1][1] == board[2][2] == player or \
-       board[1][2] == board[1][1] == board[2][0] == player:  # Diagonals 
+            return True
+    if board[0][0] == board[1][1] == board[2][2] == player or \
+       board[0][2] == board[1][1] == board[2][0] == player:  # Diagonals 
         return True
+    return False
 
 
 def tally_wins(results):
