@@ -272,7 +272,7 @@ def main() -> None:
     This is main game loop, HAVE FUN! 😁
     """
     current_player = 'X'
-    moves = 10
+    moves = 0
     results = []
 
     # test_draw(board)
