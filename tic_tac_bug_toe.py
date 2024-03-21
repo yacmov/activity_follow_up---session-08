@@ -181,9 +181,22 @@ def check_draw(board) -> bool:
                 return False
     return True
 
-def print_board():
+def print_board() -> None:
+    """
+    Purpose
+    =======
+    Display game's board
+
+    Examples
+    --------
+    >>>  | | 
+    >>> -----
+    >>>  | | 
+    >>> -----
+    >>>  | | 
+    >>> -----
+    """
     for row in board:
-     
         print('|'.join(row))
         print('-' * 5)
 
