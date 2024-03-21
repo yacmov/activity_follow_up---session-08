@@ -118,6 +118,40 @@ def print_board() -> None:
         print('|'.join(row))
         print('-' * 5)
 
+def is_draw(board) -> bool:
+    """
+    Purpose
+    =======
+    Check the game is draw or not
+    and print 'msg' with return value
+
+    Parameters
+    ----------
+    board: 2D list
+        Main game board
+    
+    Returns
+    -------
+    Bool value 'True' or 'False'
+
+    Examples
+    --------
+    .. code-block:: python
+    >>> is_draw(board)
+    T|T|T
+    -----
+    T|T|T
+    -----
+    T|T|T
+    -----
+    It's a draw!
+    """
+    if check_draw(board):
+        print_board()
+        print("It's a draw!")
+        return True
+    return False
+
 def print_board():
     for row in board:
      
