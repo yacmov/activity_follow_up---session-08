@@ -8,6 +8,30 @@ Ensure you step through this program in an IDE debugger and pdb to understand ho
 
 board = [[' ' for _ in range(3)] for _ in range(3)]
 
+def game_over(results) -> str:
+    """
+    Purpose
+    =======
+    Game over checks by list of 'results'
+
+    Parameters
+    ----------
+    results: list
+        This is storing true of win numbers
+
+    Returns
+    -------
+    Single 'string'
+
+    Examples
+    --------
+    .. code-block:: python
+    >>> print(game_over(results))
+    Thank you for playing
+    Number of wins during the game: 0
+
+    """
+    return f"""\nThank you for playing\nNumber of wins during the game: {tally_wins(results)}"""
 
 def print_board():
     for row in board:
