@@ -99,6 +99,25 @@ def play_again(msg) -> bool:
         return True
     return False
 
+def print_board() -> None:
+    """
+    Purpose
+    =======
+    Display game's board
+
+    Examples
+    --------
+    >>>  | | 
+    >>> -----
+    >>>  | | 
+    >>> -----
+    >>>  | | 
+    >>> -----
+    """
+    for row in board:
+        print('|'.join(row))
+        print('-' * 5)
+
 def print_board():
     for row in board:
      
