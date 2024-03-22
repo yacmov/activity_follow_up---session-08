@@ -2,6 +2,10 @@
 
 This is Week8's activity
 
+## Sphinx documentation html path
+
+[Sphinx documentation](/docs/_build/html/index.html)
+
 ## Run evidence of Coverage report on CLI
 
 <img src="src/img/image.png" width="800" height="auto">
@@ -13,5 +17,3 @@ This is Week8's activity
 ## Git Action Success Screenshot
 
 <img src="src/img/image-1.png" width="800" height="auto">
-
-<!-- TODO: Generate Sphinx documentation and deploy -->
