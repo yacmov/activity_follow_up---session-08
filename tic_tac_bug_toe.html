@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>tic_tac_bug_toe module &#8212; Tic Tac Bug Toe 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=601dbdee" />
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="test_tic_tac_bug_toe module" href="test_tic_tac_bug_toe.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="test_tic_tac_bug_toe.html" title="test_tic_tac_bug_toe module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tic Tac Bug Toe 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">activity_follow_up - session 08</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">tic_tac_bug_toe module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-tic_tac_bug_toe">
+<span id="tic-tac-bug-toe-module"></span><h1>tic_tac_bug_toe module<a class="headerlink" href="#module-tic_tac_bug_toe" title="Link to this heading">¶</a></h1>
+<p>A buggy Tic-Tac-Toe game that provides an opportunity to debug code by both reasoning about it and stepping through it in a debugger.</p>
+<p>The program has a number of bugs that are introduced one at a time. The goal is to find and fix the bugs.</p>
+<p>Ensure you step through this program in an IDE debugger and pdb to understand how the program works and to find the bugs.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tic_tac_bug_toe.</span></span><span class="sig-name descname"><span class="pre">Main</span></span><a class="headerlink" href="#tic_tac_bug_toe.Main" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.check_draw">
+<span class="sig-name descname"><span class="pre">check_draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.check_draw" title="Link to this definition">¶</a></dt>
+<dd><section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">¶</a></h2>
+<p>Return there is a empty cell or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">param board<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Main game board</p>
+</dd>
+<dt class="field-even">type board<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D list</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Bool type</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>True or False</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">check_draw</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+<span class="go">True # If there is no empty slot</span>
+<span class="go">False # If empty slot exist</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.game_over">
+<span class="sig-name descname"><span class="pre">game_over</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.game_over" title="Link to this definition">¶</a></dt>
+<dd><section id="id1">
+<h2>Purpose<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>Game over checks by list of ‘results’</p>
+<dl class="field-list simple">
+<dt class="field-odd">param results<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is storing true of win numbers</p>
+</dd>
+<dt class="field-even">type results<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Single ‘string’</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">game_over</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+<span class="go">Thank you for playing</span>
+<span class="go">Number of wins during the game: 0</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.is_draw">
+<span class="sig-name descname"><span class="pre">is_draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.is_draw" title="Link to this definition">¶</a></dt>
+<dd><section id="id2">
+<h2>Purpose<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>Check the game is draw or not
+and print ‘msg’ with return value</p>
+<dl class="field-list simple">
+<dt class="field-odd">param board<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Main game board</p>
+</dd>
+<dt class="field-even">type board<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D list</p>
+</dd>
+<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Bool value ‘True’ or ‘False’</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_draw</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+<span class="go">T|T|T</span>
+<span class="go">-----</span>
+<span class="go">T|T|T</span>
+<span class="go">-----</span>
+<span class="go">T|T|T</span>
+<span class="go">-----</span>
+<span class="go">It&#39;s a draw!</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.is_win">
+<span class="sig-name descname"><span class="pre">is_win</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.is_win" title="Link to this definition">¶</a></dt>
+<dd><section id="id3">
+<h2>Purpose<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>Checking win condition</p>
+<dl class="field-list simple">
+<dt class="field-odd">param player<span class="colon">:</span></dt>
+<dd class="field-odd"><p>player’s symbol</p>
+</dd>
+<dt class="field-even">type player<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bool value</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>True or False</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_win</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+<span class="go">True # if any condition is True</span>
+<span class="go">False # None of conditions are matched</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.play_again">
+<span class="sig-name descname"><span class="pre">play_again</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.play_again" title="Link to this definition">¶</a></dt>
+<dd><section id="id4">
+<h2>Purpose<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>Ask the user to play one more time</p>
+<dl class="field-list simple">
+<dt class="field-odd">param msg<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This parameter value will pass to print statement</p>
+</dd>
+<dt class="field-even">type msg<span class="colon">:</span></dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bool</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>True or False depending on input</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">play_again</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="go">Hello World Y or N:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">play_again</span><span class="p">(</span><span class="s2">&quot;Do you want play again?&quot;</span><span class="p">)</span>
+<span class="go">Do you want Play again Y or N:</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.print_board">
+<span class="sig-name descname"><span class="pre">print_board</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.print_board" title="Link to this definition">¶</a></dt>
+<dd><section id="id5">
+<h2>Purpose<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<p>Display game’s board</p>
+<p class="rubric">Examples</p>
+<p>&gt;  | |
+&gt; —–
+&gt;  | |
+&gt; —–
+&gt;  | |
+&gt; —–</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.reset_board">
+<span class="sig-name descname"><span class="pre">reset_board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.reset_board" title="Link to this definition">¶</a></dt>
+<dd><section id="id6">
+<h2>Purpose<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<p>Empty all cells data</p>
+<dl class="field-list simple">
+<dt class="field-odd">param board<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Main game board</p>
+</dd>
+<dt class="field-even">type board<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>board = [[” “, “ “, “ “], [” “, “ “, “ “], [” “, “ “, “ “]]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.reset_move">
+<span class="sig-name descname"><span class="pre">reset_move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.reset_move" title="Link to this definition">¶</a></dt>
+<dd><section id="id7">
+<h2>Purpose<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<p>Reset moves number to 0</p>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>int</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>0</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">moves</span> <span class="o">=</span> <span class="n">reset_move</span><span class="p">()</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.start" title="Link to this definition">¶</a></dt>
+<dd><section id="id8">
+<h2>Purpose<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<p>This is main game loop, HAVE FUN! 😁</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_bug_toe.Main.tally_wins">
+<span class="sig-name descname"><span class="pre">tally_wins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#tic_tac_bug_toe.Main.tally_wins" title="Link to this definition">¶</a></dt>
+<dd><section id="id9">
+<h2>Purpose<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<p>Return a int depending on how many times win</p>
+<dl class="field-list simple">
+<dt class="field-odd">param results<span class="colon">:</span></dt>
+<dd class="field-odd"><p>holding bool depending on win previously</p>
+</dd>
+<dt class="field-even">type results<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>int</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>True is 1 and False is 0, and sum up all numbers in list then return total</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tally_wins</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="c1"># if the list hold &#39;True&#39; and &#39;True&#39;</span>
+<span class="go">2 # True(1) + True(1) = 2</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">tic_tac_bug_toe module</a><ul>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main"><code class="docutils literal notranslate"><span class="pre">Main</span></code></a><ul>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.check_draw"><code class="docutils literal notranslate"><span class="pre">Main.check_draw()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.game_over"><code class="docutils literal notranslate"><span class="pre">Main.game_over()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.is_draw"><code class="docutils literal notranslate"><span class="pre">Main.is_draw()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.is_win"><code class="docutils literal notranslate"><span class="pre">Main.is_win()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.play_again"><code class="docutils literal notranslate"><span class="pre">Main.play_again()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.print_board"><code class="docutils literal notranslate"><span class="pre">Main.print_board()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.reset_board"><code class="docutils literal notranslate"><span class="pre">Main.reset_board()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.reset_move"><code class="docutils literal notranslate"><span class="pre">Main.reset_move()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.start"><code class="docutils literal notranslate"><span class="pre">Main.start()</span></code></a></li>
+<li><a class="reference internal" href="#tic_tac_bug_toe.Main.tally_wins"><code class="docutils literal notranslate"><span class="pre">Main.tally_wins()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="test_tic_tac_bug_toe.html"
+                          title="previous chapter">test_tic_tac_bug_toe module</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tic_tac_bug_toe.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="test_tic_tac_bug_toe.html" title="test_tic_tac_bug_toe module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Tic Tac Bug Toe 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >activity_follow_up - session 08</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">tic_tac_bug_toe module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Sukhwan Ko (20111176).
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
