@@ -13,3 +13,5 @@ This is Week8's activity
 ## Git Action Success Screenshot
 
 <img src="src/img/image-1.png" width="800" height="auto">
+
+<!-- TODO: Generate Sphinx documentation and deploy -->
