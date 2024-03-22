@@ -42,103 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="module-documentation">
-<span id="documentation-module"></span><h1>documentation module<a class="headerlink" href="#module-documentation" title="Link to this heading">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="documentation.any">
-<span class="sig-prename descclassname"><span class="pre">documentation.</span></span><span class="sig-name descname"><span class="pre">any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepdims=&lt;no</span> <span class="pre">value&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where=&lt;no</span> <span class="pre">value&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#documentation.any" title="Link to this definition">¶</a></dt>
-<dd><p>Test whether any array element along a given axis evaluates to True.</p>
-<p>Returns single boolean if <cite>axis</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>array_like</em>) – Input array or object that can be converted to an array.</p></li>
-<li><p><strong>axis</strong> (<em>None</em><em> or </em><em>int</em><em> or </em><em>tuple</em><em> of </em><em>ints</em><em>, </em><em>optional</em>) – <p>Axis or axes along which a logical OR reduction is performed.
-The default (<code class="docutils literal notranslate"><span class="pre">axis=None</span></code>) is to perform a logical OR over all
-the dimensions of the input array. <cite>axis</cite> may be negative, in
-which case it counts from the last to the first axis.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">New in version 1.7.0.</span></p>
-</div>
-<p>If this is a tuple of ints, a reduction is performed on multiple
-axes, instead of a single axis or all the axes as before.</p>
-</p></li>
-<li><p><strong>out</strong> (<em>ndarray</em><em>, </em><em>optional</em>) – Alternate output array in which to place the result.  It must have
-the same shape as the expected output and its type is preserved
-(e.g., if it is of type float, then it will remain so, returning
-1.0 for True and 0.0 for False, regardless of the type of <cite>a</cite>).
-See <span class="xref std std-ref">ufuncs-output-type</span> for more details.</p></li>
-<li><p><strong>keepdims</strong> (<em>bool</em><em>, </em><em>optional</em>) – <p>If this is set to True, the axes which are reduced are left
-in the result as dimensions with size one. With this option,
-the result will broadcast correctly against the input array.</p>
-<p>If the default value is passed, then <cite>keepdims</cite> will not be
-passed through to the <cite>any</cite> method of sub-classes of
-<cite>ndarray</cite>, however any non-default value will be.  If the
-sub-class’ method does not implement <cite>keepdims</cite> any
-exceptions will be raised.</p>
-</p></li>
-<li><p><strong>where</strong> (<em>array_like</em><em> of </em><em>bool</em><em>, </em><em>optional</em>) – <p>Elements to include in checking for any <cite>True</cite> values.
-See <cite>~numpy.ufunc.reduce</cite> for details.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">New in version 1.20.0.</span></p>
-</div>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>any</strong> – A new boolean or <cite>ndarray</cite> is returned unless <cite>out</cite> is specified,
-in which case a reference to <cite>out</cite> is returned.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool or ndarray</p>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.any</span></code></dt><dd><p>equivalent method</p>
-</dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span></code></dt><dd><p>Test whether all elements along a given axis evaluate to True.</p>
-</dd>
-</dl>
-</div>
-<p class="rubric">Notes</p>
-<p>Not a Number (NaN), positive infinity and negative infinity evaluate
-to <cite>True</cite> because these are not equal to zero.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">([[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]])</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">([[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="go">array([ True, False])</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="go">True</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">([[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]],</span> <span class="n">where</span><span class="o">=</span><span class="p">[[</span><span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="kc">True</span><span class="p">]])</span>
-<span class="go">False</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">o</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">out</span><span class="o">=</span><span class="n">o</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span><span class="p">,</span> <span class="n">o</span>
-<span class="go">(array(True), array(True))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Check now that z is a reference to o</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="ow">is</span> <span class="n">o</span>
-<span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">id</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="c1"># identity of z and o              </span>
-<span class="go">(191614240, 191614240)</span>
-</pre></div>
-</div>
-</dd></dl>
-
+  <section id="documentation-module">
+<h1>documentation module<a class="headerlink" href="#documentation-module" title="Link to this heading">¶</a></h1>
 </section>
 
 
@@ -148,16 +53,6 @@ to <cite>True</cite> because these are not equal to zero.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">documentation module</a><ul>
-<li><a class="reference internal" href="#documentation.any"><code class="docutils literal notranslate"><span class="pre">any()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="modules.html"
