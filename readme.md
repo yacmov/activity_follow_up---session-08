@@ -4,7 +4,7 @@ This is Week8's activity
 
 ## Sphinx documentation html path
 
-[Sphinx documentation](/docs/_build/html/index.html)
+[Sphinx documentation](https://yacmov.github.io/activity_follow_up---session-08/)
 
 ## Run evidence of Coverage report on CLI
 
